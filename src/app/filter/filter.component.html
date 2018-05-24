@@ -1,0 +1,9 @@
+<form class="fields-container">
+  <mat-form-field>
+    <input placeholder="{{name}}" type="text" matInput [formControl]="control" [matAutocomplete]="auto" >
+  </mat-form-field>
+
+  <mat-autocomplete #auto="matAutocomplete">
+    <mat-option *ngFor="let hint of hints$ | async" [value]="hint">{{hint}}</mat-option>
+  </mat-autocomplete>
+</form>
