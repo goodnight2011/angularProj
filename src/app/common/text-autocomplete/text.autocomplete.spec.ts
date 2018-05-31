@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FilterComponent } from './filter.component';
+import { TextAutocomplete } from './text.autocomplete';
 
-describe('FilterComponent', () => {
-  let component: FilterComponent;
-  let fixture: ComponentFixture<FilterComponent>;
+describe('TextAutocomplete', () => {
+  let component: TextAutocomplete;
+  let fixture: ComponentFixture<TextAutocomplete>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FilterComponent ]
+      declarations: [ TextAutocomplete ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FilterComponent);
+    fixture = TestBed.createComponent(TextAutocomplete);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,0 +1,12 @@
+<mat-expansion-panel>
+ <mat-expansion-panel-header>
+   <input matInput placeholder="Search everywhere...">
+ </mat-expansion-panel-header>
+  <text-autocomplete class="detail-control" [code]="'inn'" [name]="'Инн'"></text-autocomplete>
+  <text-autocomplete class="detail-control" [code]="'kpp'" [name]="'Кпп'"></text-autocomplete>
+  <mat-form-field class="detail-control">
+    <input matInput="" [matDatepicker]="picker" placeholder="Дата c"/>
+    <mat-datepicker-toggle> matSuffix [for]="picker"</mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+</mat-expansion-panel>

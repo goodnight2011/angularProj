@@ -3,18 +3,21 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import { FilterComponent } from './filter/filter.component';
+import { TextAutocomplete } from './common/text-autocomplete/text.autocomplete';
 import {FilterTextHintsProviderService} from "./filter-text-hints-provider.service";
 import {
-  MatAutocomplete, MatAutocompleteModule, MatButtonModule, MatFormField, MatInput, MatInputModule,
+  MatAutocomplete, MatAutocompleteModule, MatButtonModule, MatDatepickerModule, MatExpansionModule, MatFormField,
+  MatInput, MatInputModule, MatNativeDateModule,
   MatOption
 } from "@angular/material";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { SearchFilterComponent } from './search-filter/search-filter.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FilterComponent
+    TextAutocomplete,
+    SearchFilterComponent
   ],
   imports: [
     [
@@ -24,7 +27,10 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
       FormsModule,
       ReactiveFormsModule,
       MatInputModule,
-      MatButtonModule
+      MatButtonModule,
+      MatExpansionModule,
+      MatDatepickerModule,
+      MatNativeDateModule
     ]
   ],
   providers: [FilterTextHintsProviderService],

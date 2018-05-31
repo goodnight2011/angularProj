@@ -1,15 +1,15 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {FilterTextHintsProviderService} from "../filter-text-hints-provider.service";
+import {FilterTextHintsProviderService} from "../../filter-text-hints-provider.service";
 import {Observable, Subject} from "rxjs/index";
 import {debounceTime, distinctUntilChanged, switchMap} from "rxjs/internal/operators";
 import {FormControl} from "@angular/forms";
 
 @Component({
-  selector: 'app-filter',
-  templateUrl: './filter.component.html',
-  styleUrls: ['./filter.component.css']
+  selector: 'text-autocomplete',
+  templateUrl: './text.autocomplete.html',
+  styleUrls: ['./text.autocomplete.css']
 })
-export class FilterComponent implements OnInit {
+export class TextAutocomplete implements OnInit {
 
   private hints$:Observable<string[]>;
   control: FormControl = new FormControl();
