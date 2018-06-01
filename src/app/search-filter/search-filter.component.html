@@ -1,12 +1,48 @@
-<mat-expansion-panel>
- <mat-expansion-panel-header>
-   <input matInput placeholder="Search everywhere...">
- </mat-expansion-panel-header>
-  <text-autocomplete class="detail-control" [code]="'inn'" [name]="'Инн'"></text-autocomplete>
-  <text-autocomplete class="detail-control" [code]="'kpp'" [name]="'Кпп'"></text-autocomplete>
-  <mat-form-field class="detail-control">
-    <input matInput="" [matDatepicker]="picker" placeholder="Дата c"/>
-    <mat-datepicker-toggle> matSuffix [for]="picker"</mat-datepicker-toggle>
-    <mat-datepicker #picker></mat-datepicker>
+<div>
+  <mat-form-field class="search-text">
+    <input matInput placeholder="Искать везде..." [disabled]="isShowDetails()">
   </mat-form-field>
-</mat-expansion-panel>
+  <button class="expand-collapse-btn" mat-icon-button color="primary" (click)="handle($event)">
+    <mat-icon>{{collapseExpandBtnIconName()}}</mat-icon>
+  </button>
+  <div *ngIf="isShowDetails()">
+    <div class="full-width">
+      <text-autocomplete class="detail-control third-part" [code]="'uin'" [name]="'УИН'"></text-autocomplete>
+      <text-autocomplete class="detail-control third-part" [code]="'inn'" [name]="'Инн'"></text-autocomplete>
+      <mat-form-field class="detail-control third-part">
+        <input matInput  placeholder="Сумма">
+      </mat-form-field>
+    </div>
+    <div class="full-width">
+      <mat-form-field class="detail-control second-part">
+        <input matInput  placeholder="Номер аттестата аккредитации">
+      </mat-form-field>
+      <mat-form-field class="detail-control second-part">
+        <input matInput placeholder="Наименование аккредитованного лица">
+      </mat-form-field>
+    </div>
+    <div class="full-width title-container"><p>Дата начисления суммы, подлежащей уплате</p></div>
+    <div class="full-width">
+      <mat-form-field class="detail-control second-part">
+        <input matInput="" [matDatepicker]="pickerFrom" placeholder="C:"/>
+        <mat-datepicker-toggle matSuffix [for]="pickerFrom"></mat-datepicker-toggle>
+        <mat-datepicker #pickerFrom></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field class="detail-control second-part">
+        <input matInput="" [matDatepicker]="pickerTo" placeholder="По:"/>
+        <mat-datepicker-toggle matSuffix [for]="pickerTo"></mat-datepicker-toggle>
+        <mat-datepicker #pickerTo></mat-datepicker>
+      </mat-form-field>
+    </div>
+  </div>
+  <!--<mat-expansion-panel>-->
+
+  <!--<text-autocomplete class="detail-control" [code]="'inn'" [name]="'Инн'"></text-autocomplete>-->
+  <!--<text-autocomplete class="detail-control" [code]="'kpp'" [name]="'Кпп'"></text-autocomplete>-->
+  <!--<mat-form-field class="detail-control">-->
+  <!--<input matInput="" [matDatepicker]="picker" placeholder="Дата c"/>-->
+  <!--<mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>-->
+  <!--<mat-datepicker #picker></mat-datepicker>-->
+  <!--</mat-form-field>-->
+  <!--</mat-expansion-panel>-->
+</div>

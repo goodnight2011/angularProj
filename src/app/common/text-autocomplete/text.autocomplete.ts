@@ -9,11 +9,11 @@ import {FormControl} from "@angular/forms";
   templateUrl: './text.autocomplete.html',
   styleUrls: ['./text.autocomplete.css']
 })
-export class TextAutocomplete implements OnInit {
+export class TextAutocompleteComponent implements OnInit {
 
-  private hints$:Observable<string[]>;
+  private hints$: Observable<string[]>;
   control: FormControl = new FormControl();
-  private text:string;
+  private text: string;
   @Input() code: string;
   @Input() name: string;
 
