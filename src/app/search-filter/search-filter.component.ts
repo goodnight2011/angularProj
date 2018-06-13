@@ -13,7 +13,7 @@ export class SearchFilterComponent implements OnInit {
   ngOnInit() {
   }
 
-  private handle(event: MouseEvent) {
+  handle(event: MouseEvent) {
      this.showDetails  = !this.showDetails;
   }
 

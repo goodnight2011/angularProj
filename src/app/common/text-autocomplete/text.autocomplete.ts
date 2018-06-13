@@ -11,7 +11,7 @@ import {FormControl} from "@angular/forms";
 })
 export class TextAutocompleteComponent implements OnInit {
 
-  private hints$: Observable<string[]>;
+  hints$: Observable<string[]>;
   control: FormControl = new FormControl();
   private text: string;
   @Input() code: string;

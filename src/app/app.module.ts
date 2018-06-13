@@ -6,9 +6,10 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { TextAutocompleteComponent } from './common/text-autocomplete/text.autocomplete';
 import {FilterTextHintsProviderService} from './filter-text-hints-provider.service';
 import {
-  MatAutocomplete, MatAutocompleteModule, MatButtonModule, MatDatepickerModule, MatExpansionModule, MatFormField, MatIconModule,
+  MatAutocomplete, MatAutocompleteModule, MatButtonModule, MatDatepickerModule, MatExpansionModule, MatFormField,
+  MatIconModule,
   MatInput, MatInputModule, MatNativeDateModule,
-  MatOption
+  MatOption, MatPaginatorModule, MatSortModule, MatTableDataSource, MatTableModule
 } from '@angular/material';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { SearchFilterComponent } from './search-filter/search-filter.component';
@@ -32,7 +33,10 @@ import { SearchFilterComponent } from './search-filter/search-filter.component';
       MatDatepickerModule,
       MatNativeDateModule,
       MatIconModule,
-      MatButtonModule
+      MatButtonModule,
+      MatTableModule,
+      MatSortModule,
+      MatPaginatorModule
     ]
   ],
   providers: [FilterTextHintsProviderService],
