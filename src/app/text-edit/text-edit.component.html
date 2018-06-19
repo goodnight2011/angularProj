@@ -1,5 +1,5 @@
-<mat-form-field appearance="outline">
+<mat-form-field appearance="outline" class="compressed-field">
   <mat-label *ngIf="showLabel()">{{label}}</mat-label>
-  <input matInput  placeholder="{{placeholder}}">
+  <input matInput  placeholder="{{placeholder}}" [(ngModel)]="val" (input)="onValUpdate()">
 </mat-form-field>
 
