@@ -13,12 +13,14 @@ import {
 } from '@angular/material';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { SearchFilterComponent } from './search-filter/search-filter.component';
+import { TextEditComponent } from './text-edit/text-edit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TextAutocompleteComponent,
-    SearchFilterComponent
+    SearchFilterComponent,
+    TextEditComponent
   ],
   imports: [
     [
