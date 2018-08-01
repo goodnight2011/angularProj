@@ -35,6 +35,4 @@
 
   <!--<mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>-->
 <!--</div>-->
-<app-text-edit #edit [label]="'label'" [placeholder]="'placeholder'" (value)="valChange($event)"></app-text-edit>
-<p>{{value}}</p>
-<button (click)="edit.setValue('');">clear</button>
+<ng-template appGenericCont [data]="dataFor" [temp]="elem"></ng-template>

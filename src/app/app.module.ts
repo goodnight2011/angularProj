@@ -13,14 +13,18 @@ import {
 } from '@angular/material';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { SearchFilterComponent } from './search-filter/search-filter.component';
-import { TextEditComponent } from './text-edit/text-edit.component';
+import { TestElContComponent } from './test-el-cont/test-el-cont.component';
+import { GenericContDirective } from './generic-cont.directive';
+import { GenericContExComponent } from './generic-cont-ex/generic-cont-ex.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TextAutocompleteComponent,
     SearchFilterComponent,
-    TextEditComponent
+    TestElContComponent,
+    GenericContDirective,
+    GenericContExComponent
   ],
   imports: [
     [
@@ -42,6 +46,7 @@ import { TextEditComponent } from './text-edit/text-edit.component';
     ]
   ],
   providers: [FilterTextHintsProviderService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [TestElContComponent]
 })
 export class AppModule { }

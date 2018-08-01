@@ -1,5 +1,7 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {MatPaginator, MatTableDataSource} from '@angular/material';
+import {ElemCont} from "./elem-cont";
+import {TestElContComponent} from "./test-el-cont/test-el-cont.component";
 
 // export interface PeriodicElement {
 //   name: string;
@@ -44,18 +46,15 @@ import {MatPaginator, MatTableDataSource} from '@angular/material';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  // title = 'app';
-  // displayedColumns = ['position', 'name', 'weight', 'symbol'];
-  // dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
+  title = 'app';
+  displayedColumns = ['position', 'name', 'weight', 'symbol'];
+  dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
+  elem: ElemCont = TestElContComponent;
+  dataFor: string = 'data-for';
 
-  // @ViewChild(MatPaginator) paginator: MatPaginator;
-  value:string;
-
-  valChange(val:string){
-    this.value = val;
-  }
+  @ViewChild(MatPaginator) paginator: MatPaginator;
 
   ngOnInit() {
-    // this.dataSource.paginator = this.paginator;
+    this.dataSource.paginator = this.paginator;
   }
 }
